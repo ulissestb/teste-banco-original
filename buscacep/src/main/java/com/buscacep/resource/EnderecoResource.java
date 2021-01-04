@@ -11,19 +11,15 @@ import java.util.Optional;
 @RequestMapping(value="/api")
 @CrossOrigin(origins = "*")
 public class EnderecoResource {
-
-    Endereco endereco;
-
+    
     @GetMapping("/cep/{cep}")
     public Endereco buscaPorNumeroCep(@PathVariable(value="cep") Long cep){
         RestTemplate restTemplate = new RestTemplate();
         try{
-            endereco = restTemplate.getForObject("https://viacep.com.br/ws/" + cep + "/json/", Endereco.class);
+            return restTemplate.getForObject("https://viacep.com.br/ws/" + cep + "/json/", Endereco.class);
         }catch(Exception e){
             System.out.println(e);
             return new Endereco();
         }
-
-        return endereco;
     }
 }
