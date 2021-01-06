@@ -10,7 +10,7 @@ Para instalar o projeto é necessário usar uma IDE de sua preferencia, ex. Ecli
 - Abrir o projeto com a IDE de sua preferencia, instalar as dependencias via maven
 - clicar em 'run BuscacepApplication'
 
-##Rotas
+## Rotas
 
 |        url     |     params                    |response                         |
 |----------------|-------------------------------|-----------------------------|
